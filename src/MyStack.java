@@ -14,6 +14,7 @@ public class MyStack {
 	public void printMyStack() {
 		myLinkedList.printMyNode();
 		
+		
 	}
 
 	public INode peak() {

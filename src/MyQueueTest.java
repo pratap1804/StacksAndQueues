@@ -15,6 +15,19 @@ class MyQueueTest {
         myQueue.printQueue();
         INode myNode =  myQueue.peak();
         Assert.assertEquals(myFirstNode, myNode);
-
+    }
+    
+    @Test
+    public void given3NumbersWhenDequeuingFromBeginningShouldEmptyTheQueue() {
+        MyNode<Integer> myFirstNode = new MyNode<>(56);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(70);
+        MyQueue myQueue = new MyQueue();
+        myQueue.enQueue(myFirstNode);
+        myQueue.enQueue(mySecondNode);
+        myQueue.enQueue(myThirdNode);
+        myQueue.printQueue();
+        boolean result = myQueue.deQueue();
+        Assert.assertTrue(result);
     }
 }

@@ -24,4 +24,31 @@ public class MyStack {
 	public INode pop() {
 		return myLinkedList.deleteFirst();
 	}
+	
+	 public int length() {
+	        return myLinkedList.length();
+	    }
+	
+	 public boolean isEmpty() {
+	     
+		 if (length() == 0) {
+	        System.out.println("It is Empty");
+	        	return true;
+	     
+		 } else {
+	          System.out.println("It is not Empty");
+	           	return false;
+	      }
+	    
+	 }
+
+	    public boolean makeStackEmpty(){
+	        
+	    	MyStack myStack = new MyStack();
+	        
+	    	while(!myStack.isEmpty()){
+	            pop();
+	        }
+	        return true;
+	    }
 }

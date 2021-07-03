@@ -2,7 +2,7 @@
 public class MyQueue {
 
 	private final MyLinkedList myLinkedList;
-
+	MyStack myStack;
 	public MyQueue() {
 		this.myLinkedList = new MyLinkedList();
 	}
@@ -18,4 +18,12 @@ public class MyQueue {
 	public INode peak() {
 		return myLinkedList.head;
 	}
+
+	 public boolean isEmpty() {
+	        
+			return myStack.isEmpty();
+	    }
+	    public boolean deQueue() {
+	        return myStack.makeStackEmpty();
+	    }
 }
